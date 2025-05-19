@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chakula Kinakufuata</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffa500;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .section {
+      padding: 20px;
+    }
+    .menu h2, .form h2, .feedback h2 {
+      color: #ffa500;
+    }
+    .item {
+      margin: 10px 0;
+      padding: 10px;
+      background: #f4f4f4;
+      border-radius: 8px;
+    }
+    .item span {
+      font-weight: bold;
+    }
+    form input, form select, form textarea, form button {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background-color: #ffa500;
+      color: white;
+      border: none;
+    }
+    .contact {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>KICHAWELE CATERING</h1>
+    <p>Chakula safi, kitamu, na kwa wakati – kwa shule na ofisi!</p>
+  </header>
+
+  <div class="section menu">
+    <h2>Menu ya Leo</h2>
+    <div class="item">
+      <span>Wali Maharage – TZS 2,000</span><br>
+      Maharage laini yaliyoandaliwa kwa nazi na viungo asilia.
+    </div>
+    <div class="item">
+      <span>Ugali Samaki – TZS 3,500</span><br>
+      Ugali wa dona na samaki wa kukaanga wa mtoni.
+    </div>
+    <div class="item">
+      <span>Pilau Kachumbari – TZS 2,500</span><br>
+      Pilau lenye nyama laini, limenukia karafuu na hiliki.
+    </div>
+    <div class="item">
+      <span>Juice ya Embe – TZS 1,000</span><br>
+      Juice safi ya embe tamu, bila rangi wala kemikali.
+    </div>
+  </div>
+
+  <div class="section form">
+    <h2>Weka Oda Yako</h2>
+    <form onsubmit="submitOrder(); return false;">
+      <input type="text" id="jina" placeholder="Jina lako" required>
+      <input type="text" id="namba" placeholder="Namba ya simu" required>
+      <select id="chakula" required>
+        <option value="">Chagua chakula</option>
+        <option>Wali Maharage</option>
+        <option>Ugali Samaki</option>
+        <option>Pilau Kachumbari</option>
+        <option>Juice ya Embe</option>
+      </select>
+      <input type="text" id="muda" placeholder="Muda wa kutaka chakula (mfano: saa 7:00)">
+      <textarea id="mahali" placeholder="Mahali pa kufikishiwa (shule/ofisi/mtaa)" required></textarea>
+      <button type="submit">Tuma Oda</button>
+    </form>
+  </div>
+
+  <div class="section feedback">
+    <h2>Toa Maoni ya Huduma</h2>
+    <form onsubmit="submitFeedback(); return false;">
+      <input type="text" id="jinaMteja" placeholder="Jina lako">
+      <textarea id="maoni" placeholder="Maoni yako kuhusu huduma..."></textarea>
+      <button type="submit">Tuma Maoni</button>
+    </form>
+  </div>
+
+  <div class="contact">
+    <p>Wasiliana: 07XX XXX XXX | M-Pesa: 07XX XXX XXX (Jina)</p>
+    <p>© 2025 Chakula Kinakufuata</p>
+  </div>
+
+  <script>
+    function submitOrder() {
+      alert("Asante kwa oda yako! Tutakuletea kwa wakati.");
+      document.querySelectorAll(".form form")[0].reset();
+    }
+    function submitFeedback() {
+      alert("Asante kwa maoni yako! Tunathamini mchango wako.");
+      document.querySelectorAll(".feedback form")[0].reset();
+    }
+  </script>
+
+</body>
+</html>
